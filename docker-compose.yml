@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: fio
+      POSTGRES_USER: fio
+      POSTGRES_PASSWORD: fio
+    ports:
+      - "60201:5432"
