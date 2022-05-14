@@ -14,6 +14,14 @@ For Example: `localhost/recipes/BBH` maps to `rest.fnar.net/reciped/BBH`
 
 Additionally, the `maxAge` query parameter can be set using the [java duration format](https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-) `PnDTnHnM.nS`. This defaults to 10 Minutes. The newest cache-hit will be returned that is not older than `maxAge`. Larger Durations will increase the likeliness of a cache hit and therefore improve performance
 
+#### Additional Headers
+The following headers will be set on any cached request
+
+| Header      | Example                       | Description                                                                                                              |
+|-------------|-------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| X-Cache-Hit | true                          | If a cache item was found. If false a request to fio was send                                                            |
+| X-Cache-Age | 2020-10-10T12:00:01.555+00:00 | The timestamp when this item was last requested from fio. If there was no cache hit, this will be the current time stamp |
+
 ### Historical data
 Prefixing a request with /history/ returns all saved historical data for a given path in the format 
 ```json
