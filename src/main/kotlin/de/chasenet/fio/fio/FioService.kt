@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import reactor.core.scheduler.Schedulers
+import java.time.Duration
 import java.time.ZonedDateTime
 
 @Service
@@ -14,12 +15,12 @@ class FioService(
     private val fioClient: FioClient,
     private val cacheRepository: CacheRepository
 ) {
-    fun getValue(path: String): Mono<String> {
+    fun getValue(path: String, maxAge: Duration): Mono<String> {
         return Mono
             .justOrEmpty(
                 cacheRepository.getFirstById_PathAndId_TimeGreaterThanOrderById_TimeDesc(
                     path,
-                    ZonedDateTime.now().minusMinutes(10)
+                    ZonedDateTime.now().minus(maxAge)
                 )
             )
             .map { it.data }
