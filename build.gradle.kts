@@ -24,6 +24,10 @@ idea {
     }
 }
 
+tasks.compileJava {
+    inputs.files(tasks.processResources)
+}
+
 dependencies {
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 

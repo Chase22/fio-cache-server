@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "fio.url",
+      "type": "java.lang.String",
+      "description": "Fio Rest Api Base Url."
+    },
+    {
+      "name": "fio.blacklist",
+      "type": "java.lang.String",
+      "description": "Blacklisted paths using ant matchers."
+    }
+  ]
+}

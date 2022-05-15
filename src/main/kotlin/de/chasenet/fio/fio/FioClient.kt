@@ -9,9 +9,9 @@ import reactor.core.publisher.Mono
 
 
 @Service
-class FioClient {
+class FioClient(private val fioConfig: FioConfig) {
     var client = WebClient.builder()
-        .baseUrl("https://rest.fnar.net")
+        .baseUrl(fioConfig.url)
         .defaultHeader(HttpHeaders.USER_AGENT, "fio-cache-server")
         .defaultHeader(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
         .build()
