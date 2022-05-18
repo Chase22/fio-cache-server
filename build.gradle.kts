@@ -17,6 +17,10 @@ repositories {
     mavenCentral()
 }
 
+springBoot {
+    buildInfo()
+}
+
 idea {
     module {
         isDownloadSources = true

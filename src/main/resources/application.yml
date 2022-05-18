@@ -9,7 +9,7 @@ spring:
     password: ${spring.datasource.password}
 
 fio:
-  url: https://rest.fnar.net
+  url: "https://rest.fnar.net"
   blacklist:
     - /admin/**
     - /auth/**

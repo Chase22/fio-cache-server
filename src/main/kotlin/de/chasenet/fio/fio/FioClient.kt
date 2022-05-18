@@ -1,5 +1,6 @@
 package de.chasenet.fio.fio
 
+import org.springframework.boot.info.BuildProperties
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
@@ -9,10 +10,10 @@ import reactor.core.publisher.Mono
 
 
 @Service
-class FioClient(private val fioConfig: FioConfig) {
+class FioClient(fioConfig: FioConfig, buildProperties: BuildProperties) {
     var client = WebClient.builder()
         .baseUrl(fioConfig.url)
-        .defaultHeader(HttpHeaders.USER_AGENT, "fio-cache-server")
+        .defaultHeader(HttpHeaders.USER_AGENT, "${buildProperties.artifact}:${buildProperties.version}")
         .defaultHeader(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
         .build()
 
