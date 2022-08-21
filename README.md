@@ -78,3 +78,7 @@ increase performance
 
 When requesting bulk-data from a JSON endpoint, a pattern can be passed to transform the data into a csv for easier
 import into e.G. google sheets
+
+### Automatic historical data
+Certain public endpoints (e.g Price data) will be automatically requested and saved so that historical data will be 
+available for these endpoints
