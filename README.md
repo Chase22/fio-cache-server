@@ -1,5 +1,6 @@
 # Fio Caching Server
-[![GitHub](https://img.shields.io/github/license/chase22/fio-cache-server)](https://github.com/Chase22/fio-cache-server)
+
+[![GitHub](https://img.shields.io/github/license/chase22/fio-cache-server?logo=GPL-3.0)](https://github.com/Chase22/fio-cache-server)
 [![GitHub issues](https://img.shields.io/github/issues/chase22/fio-cache-server)](https://github.com/Chase22/fio-cache-server/issues)
 [![Docker Image Version (latest semver)](https://img.shields.io/docker/v/chase22/fio-cache?label=docker)](https://hub.docker.com/r/chase22/fio-cache)
 
@@ -83,5 +84,6 @@ When requesting bulk-data from a JSON endpoint, a pattern can be passed to trans
 import into e.G. google sheets
 
 ### Automatic historical data
-Certain public endpoints (e.g Price data) will be automatically requested and saved so that historical data will be 
+
+Certain public endpoints (e.g Price data) will be automatically requested and saved so that historical data will be
 available for these endpoints

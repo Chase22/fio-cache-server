@@ -44,6 +44,11 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.flywaydb:flyway-core")
 
+    implementation("com.vladsch.flexmark:flexmark:0.64.0")
+    implementation("com.vladsch.flexmark:flexmark-ext-tables:0.64.0")
+    implementation("com.vladsch.flexmark:flexmark-ext-gfm-issues:0.64.0")
+    implementation("com.vladsch.flexmark:flexmark-ext-gfm-strikethrough:0.64.0")
+
     runtimeOnly("org.postgresql:postgresql:42.3.5")
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
