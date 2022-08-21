@@ -13,7 +13,7 @@ A simple proxy for https://rest.fnar.net
 
 Send any request to the server using the same path as would be used in FIO.
 
-For Example: `localhost/recipes/BBH` maps to `rest.fnar.net/reciped/BBH`
+For Example: `localhost/recipes/BBH` maps to `rest.fnar.net/recipes/BBH`
 
 Additionally, the `maxAge` query parameter can be set using
 the [java duration format](https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-) `PnDTnHnM.nS`
