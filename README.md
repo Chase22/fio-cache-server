@@ -3,6 +3,10 @@
 ![GitHub issues](https://img.shields.io/github/issues/chase22/fio-cache-server)
 ![Docker Image Version (latest semver)](https://img.shields.io/docker/v/chase22/fio-cache?label=docker)
 
+[GitHub]: https://github.com/Chase22/fio-cache-server
+[GitHub Issues]: https://github.com/Chase22/fio-cache-server/issues
+[Docker Image Version (latest semver)]: https://hub.docker.com/r/chase22/fio-cache
+
 A simple proxy for https://rest.fnar.net
 
 ## Features
